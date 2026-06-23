@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lokasi Implementasi SMART CURVE</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🚦 SMART CURVE</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="tentang.html">Tentang</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="carakerja.html">Cara Kerja</a>
+<a href="manfaat.html">Manfaat</a>
+<a href="lokasi.html">Lokasi</a>
+<a href="simulasi.html">Simulasi</a>
+<a href="laporan.html">Laporan</a>
+<a href="pengembangan.html">Pengembangan</a>
+<a href="kontak.html">Kontak</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Lokasi Implementasi</h1>
+
+<p>
+Rekomendasi titik pemasangan SMART CURVE di Kabupaten Nunukan
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>Peta Implementasi SMART CURVE</h2>
+
+<div id="map"></div>
+
+</section>
+
+<section class="section">
+
+<h2>Status Lokasi</h2>
+
+<div class="dashboard-grid">
+
+<div class="card">
+📍 Simpang Kadir
+<br>🟢 Aktif
+</div>
+
+<div class="card">
+📍 Jalan Lingkar Nunukan
+<br>🟢 Aktif
+</div>
+
+<div class="card">
+📍 Sedadap
+<br>🟡 Perawatan
+</div>
+
+<div class="card">
+📍 Pelabuhan Tunon Taka
+<br>🟢 Aktif
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>🚦 SMART CURVE</h3>
+
+<p>
+Sistem Peringatan Kendaraan Berbasis IoT
+</p>
+
+<p>
+Kabupaten Nunukan | KLLAJ 2026
+</p>
+
+</footer>
+
+<script>
+
+var map = L.map('map').setView([4.135, 117.667], 12);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap'
+}).addTo(map);
+
+L.marker([4.135,117.667]).addTo(map)
+.bindPopup("<b>SMART CURVE</b><br>Simpang Kadir<br>Status: Aktif");
+
+L.marker([4.150,117.650]).addTo(map)
+.bindPopup("<b>SMART CURVE</b><br>Jalan Lingkar Nunukan<br>Status: Aktif");
+
+L.marker([4.120,117.690]).addTo(map)
+.bindPopup("<b>SMART CURVE</b><br>Sedadap<br>Status: Aktif");
+
+</script>
+
+</body>
+</html>

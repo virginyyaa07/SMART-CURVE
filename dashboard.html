@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard SMART CURVE</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🚦 SMART CURVE</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="tentang.html">Tentang</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="carakerja.html">Cara Kerja</a>
+<a href="manfaat.html">Manfaat</a>
+<a href="lokasi.html">Lokasi</a>
+<a href="simulasi.html">Simulasi</a>
+<a href="laporan.html">Laporan</a>
+<a href="pengembangan.html">Pengembangan</a>
+<a href="kontak.html">Kontak</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Dashboard Monitoring</h1>
+
+<p>Pemantauan Sistem SMART CURVE Secara Real-Time</p>
+
+</section>
+
+<section class="section">
+
+<h2>Monitoring Sistem</h2>
+
+<div class="dashboard-grid">
+
+<div class="card">
+<h3>🚗 Kendaraan Terdeteksi</h3>
+<p style="font-size:32px;">128</p>
+<p>Hari Ini</p>
+</div>
+
+<div class="card">
+<h3>📡 Sensor Aktif</h3>
+<p style="font-size:32px;">4/4</p>
+<p>Semua Beroperasi</p>
+</div>
+
+<div class="card">
+<h3>⚠️ Tingkat Risiko</h3>
+<p style="font-size:32px;color:orange;">Sedang</p>
+</div>
+
+<div class="card">
+<h3>🕒 Aktivasi Terakhir</h3>
+<p style="font-size:20px;">23 Juni 2026</p>
+<p>14:35 WITA</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Grafik Aktivitas Kendaraan</h2>
+
+<div class="card">
+
+<canvas id="grafikKendaraan"></canvas>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Status Perangkat</h2>
+
+<div class="dashboard-grid">
+
+<div class="card">
+🟢 Sensor HC-SR04 Aktif
+</div>
+
+<div class="card">
+🟢 ESP32 Terhubung
+</div>
+
+<div class="card">
+🟢 Website Online
+</div>
+
+<div class="card">
+🟢 Sistem Beroperasi Normal
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Riwayat Aktivasi Sensor</h2>
+
+<div class="card">
+<p>🕒 14:35 - Kendaraan Terdeteksi (Simpang Kadir)</p>
+</div>
+
+<div class="card">
+<p>🕒 13:58 - Kendaraan Terdeteksi (Jalan Lingkar)</p>
+</div>
+
+<div class="card">
+<p>🕒 13:20 - Kendaraan Terdeteksi (Sedadap)</p>
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Laporan Masyarakat</h2>
+
+<div class="card">
+
+<p>📍 Jalan Lingkar Nunukan</p>
+<p>⚠️ Tikungan minim penerangan</p>
+
+</div>
+
+<div class="card">
+
+<p>📍 Simpang Kadir</p>
+<p>⚠️ Aktivitas kendaraan tinggi pada jam sibuk</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>🚦 SMART CURVE</h3>
+
+<p>
+Sistem Peringatan Kendaraan Berbasis IoT
+</p>
+
+<p>
+Kabupaten Nunukan | KLLAJ 2026
+</p>
+
+</footer>
+
+<script>
+
+const ctx = document.getElementById('grafikKendaraan');
+
+new Chart(ctx, {
+type: 'line',
+
+data: {
+labels: ['06.00','09.00','12.00','15.00','18.00','21.00'],
+
+datasets: [{
+label: 'Jumlah Kendaraan',
+
+data: [42,115,73,118,84,28],
+
+borderColor: '#1565c0',
+
+backgroundColor: 'rgba(21,101,192,0.2)',
+
+fill: true,
+
+tension: 0.4
+}]
+},
+
+options: {
+responsive: true,
+
+plugins: {
+legend: {
+display: true
+}
+},
+
+scales: {
+y: {
+beginAtZero: true
+}
+}
+}
+});
+
+</script>
+
+</body>
+</html>
